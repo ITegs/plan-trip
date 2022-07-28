@@ -8,4 +8,21 @@
 .App {
   text-align: center;
   background-color: var(--bg);
+  min-height: 100vh;
+}
+
+.roadtrip-img {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(50, 144, 143);
+  background: linear-gradient(
+    180deg,
+    rgba(50, 144, 143, 1) 50%,
+    rgba(255, 133, 82, 1) 100%
+  );
+}
+.roadtrip-img img {
+  height: 30vh;
 }

@@ -16,6 +16,8 @@
 
   margin-inline: 1.5em;
   border-radius: 2em;
+
+  box-shadow: 5px 5px rgba(255, 255, 255, 0.2);
 }
 
 .time {
