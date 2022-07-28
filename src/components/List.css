@@ -1,6 +1,5 @@
 .listContainer {
   font-family: "Concert One", cursive;
-  color: var(--accent2);
   background-color: var(--accent1);
   min-height: 20vh;
 
@@ -24,6 +23,7 @@
   text-align: left;
   padding-left: 25vw;
   padding-bottom: 1em;
+  color: var(--accent2);
 }
 
 .item {

@@ -27,7 +27,7 @@ export default function List() {
 
   return (
     <div className="listContainer">
-      <div className="title">Wichtige Sachen:</div>
+      <div className="title">Wichtige Sachen</div>
       <ul className="list">
         {liste.map((l) => (
           <li key={l} className="item">
