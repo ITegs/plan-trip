@@ -35,7 +35,7 @@ export default function Timer() {
   };
 
   return (
-    <div className="container">
+    <div className="timerContainer">
       <div className="time">
         <div className="days">
           <u className="num">{remDays}</u> Tage
