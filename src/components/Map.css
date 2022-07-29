@@ -1,6 +1,6 @@
 .mapContainer {
   background-color: var(--accent1);
-  min-height: 20vh;
+  /* min-height: 20vh; */
 
   margin-inline: 0.8em;
   margin-top: 1em;

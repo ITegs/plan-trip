@@ -1,7 +1,7 @@
 .costContainer {
   font-family: "Concert One", cursive;
   background-color: var(--accent1);
-  min-height: 20vh;
+  min-height: 10vh;
 
   margin-inline: 1.5em;
   margin-top: 1em;

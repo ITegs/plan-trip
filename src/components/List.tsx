@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./List.css";
 
 export default function List() {
+  const [expand, setExpand] = useState(false);
+
   const [liste, setListe] = useState([]);
 
   const getData = () => {
@@ -27,15 +29,19 @@ export default function List() {
 
   return (
     <div className="listContainer">
-      <div className="title">Wichtige Sachen</div>
-      <ul className="list">
-        {liste.map((l) => (
-          <li key={l} className="item">
-            {l}
-            <input type={"checkbox"} />
-          </li>
-        ))}
-      </ul>
+      <div className="title" onClick={() => setExpand(!expand)}>
+        Wichtige Sachen
+      </div>
+      {expand && (
+        <ul className="list">
+          {liste.map((l) => (
+            <li key={l} className="item">
+              {l}
+              <input type={"checkbox"} />
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

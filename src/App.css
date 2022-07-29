@@ -1,14 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+
 :root {
   --bg: #ff8552;
   --text: #61424a;
   --accent1: #32908f;
-  --accent2: #26c485;
+  --accent2: #d1faff;
+  --title: #285ca4;
 }
 
 .App {
   text-align: center;
   background-color: var(--bg);
   min-height: 100vh;
+  padding-bottom: 2em;
 }
 
 .roadtrip-img {

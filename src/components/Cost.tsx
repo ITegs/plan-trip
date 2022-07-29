@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./Cost.css";
 
 export default function Cost() {
+  const [expand, setExpand] = useState(false);
+
   const [liste, setListe] = useState([]);
 
   const getData = () => {
@@ -27,21 +29,25 @@ export default function Cost() {
 
   return (
     <div className="costContainer">
-      <div className="title">Kosten</div>
-      <ul className="list">
-        <li className="costItem">
-          Anna: <u>{liste[0]}€</u>
-        </li>
-        <li className="costItem">
-          Liv: <u>{liste[1]}€</u>
-        </li>
-        <li className="costItem">
-          Dave: <u>{liste[2]}€</u>
-        </li>
-        <li className="costItem">
-          Jojo: <u>{liste[3]}€</u>
-        </li>
-      </ul>
+      <div className="title" onClick={() => setExpand(!expand)}>
+        Kosten
+      </div>
+      {expand && (
+        <ul className="list">
+          <li className="costItem">
+            Anna: <u>{liste[0]}€</u>
+          </li>
+          <li className="costItem">
+            Liv: <u>{liste[1]}€</u>
+          </li>
+          <li className="costItem">
+            Dave: <u>{liste[2]}€</u>
+          </li>
+          <li className="costItem">
+            Jojo: <u>{liste[3]}€</u>
+          </li>
+        </ul>
+      )}
     </div>
   );
 }

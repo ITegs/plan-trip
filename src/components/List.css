@@ -1,7 +1,7 @@
 .listContainer {
   font-family: "Concert One", cursive;
   background-color: var(--accent1);
-  min-height: 20vh;
+  /* min-height: 20vh; */
 
   margin-inline: 1em;
   margin-top: 1em;
@@ -13,7 +13,7 @@
 .title {
   font-size: 2em;
   padding-top: 0.7em;
-  padding-bottom: 0.3em;
+  padding-bottom: 0.7em;
   color: var(--title);
   text-shadow: 2px 2px rgba(255, 255, 255, 0.3);
 }

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 export default function Plans() {
+  const [expand, setExpand] = useState(false);
+
   const [liste, setListe] = useState([]);
 
   const getData = () => {
@@ -26,14 +28,18 @@ export default function Plans() {
 
   return (
     <div className="costContainer">
-      <div className="title">Pläne</div>
-      <ul className="list">
-        {liste.map((l) => (
-          <li key={l} className="item">
-            {l}
-          </li>
-        ))}
-      </ul>
+      <div className="title" onClick={() => setExpand(!expand)}>
+        Pläne
+      </div>
+      {expand && (
+        <ul className="list">
+          {liste.map((l) => (
+            <li key={l} className="item">
+              {l}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
