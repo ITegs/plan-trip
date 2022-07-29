@@ -39,3 +39,14 @@
     rgba(255, 133, 82, 1) 100%
   );
 }
+
+.login {
+  padding: 2em;
+  animation: expand 1s;
+}
+
+.login p {
+  font-family: "Concert One", cursive;
+  color: var(--title);
+  padding-top: 0.5em;
+}
