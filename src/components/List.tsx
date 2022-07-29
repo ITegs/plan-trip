@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./List.css";
 
 export default function List() {
-  const [expand, setExpand] = useState(false);
+  const [expand, setExpand] = useState(true);
 
   const [liste, setListe] = useState([]);
 
@@ -32,16 +32,14 @@ export default function List() {
       <div className="title" onClick={() => setExpand(!expand)}>
         Wichtige Sachen
       </div>
-      {expand && (
-        <ul className="list">
-          {liste.map((l) => (
-            <li key={l} className="item">
-              {l}
-              <input type={"checkbox"} />
-            </li>
-          ))}
-        </ul>
-      )}
+      <ul className={expand ? "list" : "invisible"}>
+        {liste.map((l) => (
+          <li key={l} className="item">
+            {l}
+            <input type={"checkbox"} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

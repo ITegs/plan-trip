@@ -32,22 +32,20 @@ export default function Cost() {
       <div className="title" onClick={() => setExpand(!expand)}>
         Kosten
       </div>
-      {expand && (
-        <ul className="list">
-          <li className="costItem">
-            Anna: <u>{liste[0]}€</u>
-          </li>
-          <li className="costItem">
-            Liv: <u>{liste[1]}€</u>
-          </li>
-          <li className="costItem">
-            Dave: <u>{liste[2]}€</u>
-          </li>
-          <li className="costItem">
-            Jojo: <u>{liste[3]}€</u>
-          </li>
-        </ul>
-      )}
+      <ul className={expand ? "list" : "invisible"}>
+        <li className="costItem">
+          Anna: <u>{liste[0]}€</u>
+        </li>
+        <li className="costItem">
+          Liv: <u>{liste[1]}€</u>
+        </li>
+        <li className="costItem">
+          Dave: <u>{liste[2]}€</u>
+        </li>
+        <li className="costItem">
+          Jojo: <u>{liste[3]}€</u>
+        </li>
+      </ul>
     </div>
   );
 }

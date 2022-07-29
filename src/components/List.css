@@ -24,6 +24,21 @@
   padding-left: 25vw;
   padding-bottom: 1em;
   color: var(--accent2);
+
+  animation: expand 0.5s;
+}
+
+.invisible {
+  display: none;
+}
+
+@keyframes expand {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .item {

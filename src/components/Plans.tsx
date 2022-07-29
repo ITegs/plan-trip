@@ -31,15 +31,13 @@ export default function Plans() {
       <div className="title" onClick={() => setExpand(!expand)}>
         Pläne
       </div>
-      {expand && (
-        <ul className="list">
-          {liste.map((l) => (
-            <li key={l} className="item">
-              {l}
-            </li>
-          ))}
-        </ul>
-      )}
+      <ul className={expand ? "list" : "invisible"}>
+        {liste.map((l) => (
+          <li key={l} className="item">
+            {l}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
