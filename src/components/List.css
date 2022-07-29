@@ -25,7 +25,7 @@
   padding-bottom: 1em;
   color: var(--accent2);
 
-  animation: expand 0.5s;
+  animation: expand 1s;
 }
 
 .invisible {

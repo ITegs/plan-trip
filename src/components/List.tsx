@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./List.css";
 
 export default function List() {
-  const [expand, setExpand] = useState(true);
+  const [expand, setExpand] = useState(false);
 
   const [liste, setListe] = useState([]);
 
