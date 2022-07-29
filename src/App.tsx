@@ -19,6 +19,7 @@ function App() {
       <Plans />
       <List />
       <Map />
+      <div className="footer" />
     </div>
   );
 }

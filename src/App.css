@@ -12,7 +12,6 @@
   text-align: center;
   background-color: var(--bg);
   min-height: 100vh;
-  padding-bottom: 2em;
 }
 
 .roadtrip-img {
@@ -29,4 +28,14 @@
 }
 .roadtrip-img img {
   height: 30vh;
+}
+
+.footer {
+  height: 7em;
+  background: rgb(50, 144, 143);
+  background: linear-gradient(
+    0deg,
+    rgba(50, 144, 143, 1) 0%,
+    rgba(255, 133, 82, 1) 100%
+  );
 }
