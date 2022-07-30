@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import PullToRefresh from "react-simple-pull-to-refresh";
+
 import "./App.css";
+import roadtrip from "./roadtrip.svg";
+
 import List from "./components/List";
 import Timer from "./components/Timer";
 import Map from "./components/Map";
 import Cost from "./components/Cost";
-
-import roadtrip from "./roadtrip.svg";
 import Plans from "./components/Plans";
 import Admin from "./components/Admin";
 import Photos from "./components/Photos";
@@ -16,7 +18,6 @@ function App() {
   const [user, setUser] = useState(Number(localStorage.getItem("userlevel")));
 
   const validate = (e: string) => {
-    //! CRITICAL!
     switch (e) {
       case "5555":
         console.log("Authorized Nr. 1");
@@ -44,32 +45,38 @@ function App() {
     }
   };
 
+  async function handleRefresh() {
+    window.location.reload();
+  }
+
   return (
-    <div className="App">
-      <div className="roadtrip-img">
-        <img src={roadtrip} onDoubleClick={() => setShowInput(!showInput)} />
-      </div>
-      {showInput && (
-        <div className="login">
-          <input
-            type={"tel"}
-            autoFocus={true}
-            maxLength={4}
-            placeholder="Passwort"
-            onChange={(e) => validate(e.target.value)}
-          />
-          <p>Willkommen lvl. {user}</p>
+    <PullToRefresh onRefresh={handleRefresh} backgroundColor="#32908f">
+      <div className="App">
+        <div className="roadtrip-img">
+          <img src={roadtrip} onDoubleClick={() => setShowInput(!showInput)} />
         </div>
-      )}
-      <Timer />
-      {user >= 1 && <Photos />}
-      {user >= 2 && <Cost />}
-      <Plans />
-      {user >= 2 && <List />}
-      <Map />
-      {user == 3 && <Admin />}
-      <div className="footer" />
-    </div>
+        {showInput && (
+          <div className="login">
+            <input
+              type={"tel"}
+              autoFocus={true}
+              maxLength={4}
+              placeholder="Passwort"
+              onChange={(e) => validate(e.target.value)}
+            />
+            <p>Willkommen lvl. {user}</p>
+          </div>
+        )}
+        <Timer />
+        {user >= 1 && <Photos />}
+        <Map />
+        {user >= 2 && <Cost />}
+        <Plans />
+        {user >= 2 && <List />}
+        {user == 3 && <Admin />}
+        <div className="footer" />
+      </div>
+    </PullToRefresh>
   );
 }
 

@@ -2,20 +2,34 @@ import React, { useState } from "react";
 import "./Admin.css";
 
 export default function Admin() {
-  const [selfie, setSelfie] = useState<any>();
+  const [location, setLocation] = useState<string>();
+  const [image, setImage] = useState<any>();
+
   const [reqResponse, setResponse] = useState<any>();
 
-  function uploadSelfie() {
+  function uploadLocation() {
+    setResponse("Hochladen...");
+    fetch("https://trip.jo-dev.de/api/location.php?loc=" + location).then(
+      (response) => {
+        console.log(response);
+        setResponse("Location hochgeladen!");
+        setTimeout(() => setResponse(""), 3000);
+      }
+    );
+  }
+
+  function uploadImage() {
+    setResponse("Hochladen...");
     var date = new Date().toISOString();
 
-    var blob = selfie.slice(0, selfie.size, "image/jpg");
+    var blob = image.slice(0, image.size, "image/jpg");
     var datename = new File([blob], date + ".jpg", {
       type: "image/jpg",
     });
 
     const data = new FormData();
     data.append("fileToUpload", datename);
-    fetch("https://trip.jo-dev.de/api/selfie.php", {
+    fetch("https://trip.jo-dev.de/api/image.php", {
       method: "POST",
       body: data,
     }).then((response) => {
@@ -42,19 +56,23 @@ export default function Admin() {
         </div>
         <div className="adminLocation">
           <p className="adminHeader">Aktueller Ort</p>
-          <input type={"text"} placeholder={"Ortsname"} />
-          <button>Speichern</button>
+          <input
+            type={"text"}
+            placeholder={"Ortsname"}
+            onChange={(e) => setLocation(e.target.value)}
+          />
+          <button onClick={() => uploadLocation()}>Speichern</button>
         </div>
         <div className="adminSelfie">
-          <p className="adminHeader">Selfie</p>
+          <p className="adminHeader">Fotos</p>
           <input
             type={"file"}
             accept={".jpg"}
             onChange={(e) => {
-              setSelfie(e.target.files![0]);
+              setImage(e.target.files![0]);
             }}
           />
-          <button onClick={() => uploadSelfie()}>Speichern</button>
+          <button onClick={() => uploadImage()}>Speichern</button>
           <p>{reqResponse}</p>
         </div>
       </div>

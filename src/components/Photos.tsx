@@ -38,7 +38,7 @@ export default function Photos() {
   }, []);
   return (
     <div className="photoContainer">
-      <div className="photoTitle">Fotos</div>
+      {/* <div className="photoTitle">Fotos</div> */}
       <ImageGallery
         items={liste}
         showBullets={true}
