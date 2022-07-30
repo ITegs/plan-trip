@@ -7,6 +7,8 @@ import Cost from "./components/Cost";
 
 import roadtrip from "./roadtrip.svg";
 import Plans from "./components/Plans";
+import Admin from "./components/Admin";
+import Photos from "./components/Photos";
 
 function App() {
   const [showInput, setShowInput] = useState(false);
@@ -60,10 +62,12 @@ function App() {
         </div>
       )}
       <Timer />
+      {user >= 1 && <Photos />}
       {user >= 2 && <Cost />}
       <Plans />
       {user >= 2 && <List />}
       <Map />
+      {user == 3 && <Admin />}
       <div className="footer" />
     </div>
   );

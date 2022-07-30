@@ -1,0 +1,39 @@
+.adminContainer {
+  font-family: "Concert One", cursive;
+  background-color: var(--text);
+  padding: 2em;
+  margin: 1em;
+
+  border-radius: 1em;
+}
+
+.adminTitle {
+  font-size: 2em;
+  color: var(--bg);
+}
+
+.adminContent {
+  text-align: left;
+  padding-top: 1em;
+}
+
+.adminHeader {
+  font-size: 1.5em;
+  color: var(--accent2);
+}
+
+.adminContent button {
+  width: 33%;
+}
+
+.adminCost input,
+select {
+  width: 33%;
+  margin-bottom: 2em;
+}
+
+.adminLocation input,
+.adminSelfie input {
+  width: 66%;
+  margin-bottom: 2em;
+}
