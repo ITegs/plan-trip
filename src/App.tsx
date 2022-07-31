@@ -11,6 +11,7 @@ import Cost from "./components/Cost";
 import Plans from "./components/Plans";
 import Admin from "./components/Admin";
 import Photos from "./components/Photos";
+import Main from "./components/Main";
 
 function App() {
   const [showInput, setShowInput] = useState(false);
@@ -68,6 +69,7 @@ function App() {
           </div>
         )}
         <Timer />
+        <Main />
         {user >= 1 && <Photos />}
         <Map />
         {user >= 2 && <Cost />}

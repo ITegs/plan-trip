@@ -5,10 +5,15 @@
 
 :root {
   --bg: #ff8552;
-  --text: #61424a;
+  --text: #0b4745;
   --accent1: #32908f;
   --accent2: #d1faff;
   --title: #285ca4;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .App {

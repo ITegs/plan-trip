@@ -1,0 +1,68 @@
+.mainContainer {
+  font-family: "Concert One", cursive;
+  min-height: 20vh;
+  margin-block: 1em;
+
+  /* background-color: var(--title); */
+  background: rgb(255, 133, 82);
+  background: linear-gradient(
+    0,
+    rgba(255, 133, 82, 1) 0%,
+    rgba(50, 144, 143, 1) 25%,
+    rgba(50, 144, 143, 1) 75%,
+    rgba(255, 133, 82, 1) 100%
+  );
+}
+
+.mainTitle {
+  font-size: 2em;
+  padding-top: 2em;
+  color: var(--accent2);
+  text-shadow: 2px 2px rgba(255, 133, 82, 0.8);
+}
+
+.mainTitle u {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #fcedd8;
+  text-shadow: 2px 2px 0px #eb452b, 4px 4px 0px #efa032, 6px 6px 0px #46b59b,
+    8px 8px 0px #017e7f, 10px 10px 0px #052939;
+}
+
+.weather {
+  margin: 2em;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 2.5em;
+  padding-inline: 0.5em;
+  border: 2px var(--bg) solid;
+  border-radius: 1em;
+}
+
+.weatherTitle {
+  margin-right: 40vw;
+  font-size: 1.8em;
+  color: var(--text);
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.3);
+}
+
+.temperature {
+  text-decoration: none;
+  font-size: 2em;
+  color: #fcedd8;
+  text-shadow: 2px 2px 0px #eb452b, 4px 4px 0px #efa032;
+}
+
+.conditions {
+  font-size: 1.7em;
+  color: var(--accent2);
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conditions img {
+  height: 2em;
+}

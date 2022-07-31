@@ -1,13 +1,7 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
 .timerContainer {
   font-family: "Concert One", cursive;
   color: var(--text);
   background-color: var(--accent1);
-  min-height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
