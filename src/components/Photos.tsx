@@ -24,7 +24,7 @@ export default function Photos() {
   function generateGalleryArray(myJson: any) {
     var array: any[] = [];
     myJson.map((l: String, i: number) =>
-      array.push({
+      array.unshift({
         original: "api/img/" + l,
         thumbnail: "api/img/" + l,
       })

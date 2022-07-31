@@ -29,7 +29,7 @@ export default function Map() {
 
   return (
     <div className="mapContainer">
-      <p onClick={() => setExpand(!expand)}>Aktueller Ort</p>
+      <p onClick={() => setExpand(!expand)}>Karte</p>
       <iframe
         className={!expand ? "invisible" : ""}
         src={"https://www.google.de/maps?output=embed&q=" + liste[0]}
