@@ -9,7 +9,7 @@ export default function Admin() {
 
   function uploadLocation() {
     setResponse("Hochladen...");
-    fetch("https://trip.jo-dev.de/api/location.php?loc=" + location).then(
+    fetch("https://YOUR-SERVER.com/location.php?loc=" + location).then(
       (response) => {
         console.log(response);
         setResponse("Location hochgeladen!");
@@ -29,7 +29,7 @@ export default function Admin() {
 
     const data = new FormData();
     data.append("fileToUpload", datename);
-    fetch("https://trip.jo-dev.de/api/image.php", {
+    fetch("https://YOUR-SERVER.com/image.php", {
       method: "POST",
       body: data,
     }).then((response) => {

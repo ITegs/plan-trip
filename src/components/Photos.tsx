@@ -35,7 +35,7 @@ export default function Photos() {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <div className="photoContainer">
       {/* <div className="photoTitle">Fotos</div> */}

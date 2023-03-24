@@ -54,7 +54,11 @@ function App() {
     <PullToRefresh onRefresh={handleRefresh} backgroundColor="#32908f">
       <div className="App">
         <div className="roadtrip-img">
-          <img src={roadtrip} onDoubleClick={() => setShowInput(!showInput)} />
+          <img
+            src={roadtrip}
+            onDoubleClick={() => setShowInput(!showInput)}
+            alt="icon"
+          />
         </div>
         {showInput && (
           <div className="login">
@@ -75,7 +79,7 @@ function App() {
         {user >= 2 && <Cost />}
         <Plans />
         {user >= 2 && <List />}
-        {user == 3 && <Admin />}
+        {user === 3 && <Admin />}
         <div className="footer" />
       </div>
     </PullToRefresh>

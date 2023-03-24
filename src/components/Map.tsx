@@ -31,6 +31,7 @@ export default function Map() {
     <div className="mapContainer">
       <p onClick={() => setExpand(!expand)}>Karte</p>
       <iframe
+        title="map"
         className={!expand ? "invisible" : ""}
         src={"https://www.google.de/maps?output=embed&q=" + liste[0]}
         loading="lazy"
